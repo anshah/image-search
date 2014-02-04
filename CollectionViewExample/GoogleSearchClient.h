@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GoogleSearchClient : UICollectionViewCell
+@interface GoogleSearchClient: NSObject
 
 - (void) search:(NSString*)query start:(int)start success:(void (^)(NSURLRequest* request, NSHTTPURLResponse* response, id data))success failure:(void (^)(NSURLRequest* request, NSHTTPURLResponse* response, NSError* error, id data))failure;
 
