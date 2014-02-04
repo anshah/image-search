@@ -14,13 +14,15 @@
 		64C7E592189F8ACD000B84DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C7E591189F8ACD000B84DD /* main.m */; };
 		64C7E596189F8ACD000B84DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C7E595189F8ACD000B84DD /* AppDelegate.m */; };
 		64C7E599189F8ACD000B84DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64C7E597189F8ACD000B84DD /* Main.storyboard */; };
-		64C7E59C189F8ACD000B84DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C7E59B189F8ACD000B84DD /* ViewController.m */; };
 		64C7E59E189F8ACD000B84DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64C7E59D189F8ACD000B84DD /* Images.xcassets */; };
 		64C7E5A5189F8ACD000B84DD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C7E5A4189F8ACD000B84DD /* XCTest.framework */; };
 		64C7E5A6189F8ACD000B84DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C7E585189F8ACD000B84DD /* Foundation.framework */; };
 		64C7E5A7189F8ACD000B84DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C7E589189F8ACD000B84DD /* UIKit.framework */; };
 		64C7E5AF189F8ACD000B84DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64C7E5AD189F8ACD000B84DD /* InfoPlist.strings */; };
 		64C7E5B1189F8ACD000B84DD /* CollectionViewExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C7E5B0189F8ACD000B84DD /* CollectionViewExampleTests.m */; };
+		64C7E5BC189F8B31000B84DD /* MyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C7E5BB189F8B31000B84DD /* MyCollectionViewController.m */; };
+		64C7E5BF189F8B8F000B84DD /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C7E5BE189F8B8F000B84DD /* MyCollectionViewCell.m */; };
+		64C7E5C2189F8CF2000B84DD /* GoogleSearchClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C7E5C1189F8CF2000B84DD /* GoogleSearchClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +47,18 @@
 		64C7E594189F8ACD000B84DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		64C7E595189F8ACD000B84DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		64C7E598189F8ACD000B84DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		64C7E59A189F8ACD000B84DD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		64C7E59B189F8ACD000B84DD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		64C7E59D189F8ACD000B84DD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		64C7E5A3189F8ACD000B84DD /* CollectionViewExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64C7E5A4189F8ACD000B84DD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		64C7E5AC189F8ACD000B84DD /* CollectionViewExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CollectionViewExampleTests-Info.plist"; sourceTree = "<group>"; };
 		64C7E5AE189F8ACD000B84DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		64C7E5B0189F8ACD000B84DD /* CollectionViewExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewExampleTests.m; sourceTree = "<group>"; };
+		64C7E5BA189F8B31000B84DD /* MyCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewController.h; sourceTree = "<group>"; };
+		64C7E5BB189F8B31000B84DD /* MyCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewController.m; sourceTree = "<group>"; };
+		64C7E5BD189F8B8F000B84DD /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
+		64C7E5BE189F8B8F000B84DD /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
+		64C7E5C0189F8CF2000B84DD /* GoogleSearchClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleSearchClient.h; sourceTree = "<group>"; };
+		64C7E5C1189F8CF2000B84DD /* GoogleSearchClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleSearchClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +121,13 @@
 				64C7E594189F8ACD000B84DD /* AppDelegate.h */,
 				64C7E595189F8ACD000B84DD /* AppDelegate.m */,
 				64C7E597189F8ACD000B84DD /* Main.storyboard */,
-				64C7E59A189F8ACD000B84DD /* ViewController.h */,
-				64C7E59B189F8ACD000B84DD /* ViewController.m */,
 				64C7E59D189F8ACD000B84DD /* Images.xcassets */,
 				64C7E58C189F8ACD000B84DD /* Supporting Files */,
+				64C7E5BA189F8B31000B84DD /* MyCollectionViewController.h */,
+				64C7E5BB189F8B31000B84DD /* MyCollectionViewController.m */,
+				64C7E5BD189F8B8F000B84DD /* MyCollectionViewCell.h */,
+				64C7E5BE189F8B8F000B84DD /* MyCollectionViewCell.m */,
+				64C7E5C3189F8FB8000B84DD /* API */,
 			);
 			path = CollectionViewExample;
 			sourceTree = "<group>";
@@ -150,6 +159,15 @@
 				64C7E5AD189F8ACD000B84DD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		64C7E5C3189F8FB8000B84DD /* API */ = {
+			isa = PBXGroup;
+			children = (
+				64C7E5C0189F8CF2000B84DD /* GoogleSearchClient.h */,
+				64C7E5C1189F8CF2000B84DD /* GoogleSearchClient.m */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,9 +267,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64C7E59C189F8ACD000B84DD /* ViewController.m in Sources */,
 				64C7E596189F8ACD000B84DD /* AppDelegate.m in Sources */,
+				64C7E5C2189F8CF2000B84DD /* GoogleSearchClient.m in Sources */,
 				64C7E592189F8ACD000B84DD /* main.m in Sources */,
+				64C7E5BF189F8B8F000B84DD /* MyCollectionViewCell.m in Sources */,
+				64C7E5BC189F8B31000B84DD /* MyCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

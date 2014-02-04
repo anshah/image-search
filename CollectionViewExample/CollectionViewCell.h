@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MyCollectionViewCell.h
 //  CollectionViewExample
 //
 //  Created by Ankit Nitin Shah on 2/3/14.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MyCollectionViewCell : UICollectionViewCell
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
