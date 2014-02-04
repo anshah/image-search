@@ -10,7 +10,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "GoogleSearchClient.h"
 #import "Image.h"
-
+//#import "ExpandedViewController.h"
 
 @interface CollectionViewController ()
 
@@ -38,7 +38,7 @@
 {
     [super viewDidLoad];
     
-    self.searchBarTop = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    self.searchBarTop = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, [self getDeviceWithForOrientation], 44)];
     [self.searchBarTop setPlaceholder:@"Enter your command here"];
     //self.searchDC = [[UISearchDisplayController alloc]initWithSearchBar:self.searchBarTop contentsController:self];
     self.searchBarTop.delegate = self;
@@ -56,7 +56,7 @@
 
 -(void) searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     if(searchBar.text.length >0){
-        NSLog(@"Search bar end");
+        //NSLog(@"Search bar end");
         [searchBar endEditing:true];
         self.pageIndexSearchResult = 0;
         self.searchingMore = 4;
@@ -83,8 +83,8 @@
 
 - (UICollectionViewCell*) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     CollectionViewCell *myCell = [collectionView
-                                    dequeueReusableCellWithReuseIdentifier:@"MyCell"
-                                    forIndexPath:indexPath];
+                                  dequeueReusableCellWithReuseIdentifier:@"MyCell"
+                                  forIndexPath:indexPath];
     Image* img = [self.images objectAtIndex:indexPath.row];
     //UIImage* loadingImg = [UIImage imageWithContentsOfFile: @"images/loading.gif"];
     UIImageView* imageView = myCell.imageView;
@@ -97,8 +97,8 @@
     return myCell;
 }
 /*
--(CGSize) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-}*/
+ -(CGSize) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+ }*/
 
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -106,6 +106,14 @@
     Image *image = [self.images objectAtIndex:indexPath.row ];
     return CGSizeMake(image.displayWidth, 100);
 }
+/*
+ -(void) collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
+ NSLog(@"Selected");
+ Image* img = [self.images objectAtIndex: indexPath.row];
+ 
+ ExpandedViewController* imgModelController = [[ExpandedViewController alloc] initWithImage:img];
+ [self presentViewController:imgModelController animated: YES completion:nil];
+ }*/
 
 - (void) scrollViewDidScroll:(UIScrollView *)scrollView{
     
@@ -133,7 +141,7 @@
             self.imageSets = [self groupTogether: self.images];
             //= [NSArray arrayWithArray:array];
             //NSLog(@"Count: %d %@",self.imageSets.count, self.images);
-            NSLog(@"Img: %@", self.images);
+            //NSLog(@"Img: %@", self.images);
             [self.collectionView reloadData];
         }
         self.searchingMore = self.searchingMore-1;
@@ -144,7 +152,23 @@
     self.pageIndexSearchResult += 4;
 }
 
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
+    self.searchBarTop.frame = CGRectMake(0, 0, [self getDeviceWithForOrientation], 44);
+    self.imageSets = [self groupTogether: self.images];
+    [self.collectionView reloadData];
+    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+}
+
+-(int) getDeviceWithForOrientation{
+    UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+    int screenwidth = [[UIScreen mainScreen] bounds].size.width;
+    if ((orientation == UIDeviceOrientationLandscapeLeft || orientation == UIDeviceOrientationLandscapeRight)) {
+        screenwidth = [[UIScreen mainScreen] bounds].size.height;
+    }
+    return screenwidth;
+}
 - (NSMutableArray*) groupTogether: (NSArray*) imgs{
+    int screenwidth = [self getDeviceWithForOrientation];
     NSMutableArray* result = [[NSMutableArray alloc] init];
     NSMutableArray* set = nil;
     for (int i= 0; i< imgs.count; i++) {
@@ -155,17 +179,17 @@
             for(Image* img in set){
                 totalExistingWidth += [img scaledWidth];
             }
-            float errorPerImage = ((totalExistingWidth -319)*1.0)/ [set count];
-            float errorPerImageAdded = ((totalExistingWidth+[imgs[i] scaledWidth] -319)*1.0)/ ([set count]+1);
+            float errorPerImage = ((totalExistingWidth -screenwidth)*1.0)/ [set count];
+            float errorPerImageAdded = ((totalExistingWidth+[imgs[i] scaledWidth] -screenwidth)*1.0)/ ([set count]+1);
             if((errorPerImage > 0 && errorPerImageAdded >0)
                || (abs(errorPerImage) < abs(errorPerImageAdded))
                || (i+1 == imgs.count)){
                 [result addObject: set];
-                int totalError = (totalExistingWidth -319);
+                int totalError = (totalExistingWidth -screenwidth);
                 for(Image* img in set){
                     img.displayWidth = [img scaledWidth] - (([img scaledWidth]*totalError)/totalExistingWidth);
                 }
-                int missed = 319;
+                int missed = screenwidth;
                 for(Image* img in set){
                     missed -= [img displayWidth];
                 }
