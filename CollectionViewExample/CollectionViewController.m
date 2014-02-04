@@ -39,7 +39,7 @@
     [super viewDidLoad];
     
     self.searchBarTop = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, [self getDeviceWithForOrientation], 44)];
-    [self.searchBarTop setPlaceholder:@"Enter your command here"];
+    [self.searchBarTop setPlaceholder:@"Search"];
     //self.searchDC = [[UISearchDisplayController alloc]initWithSearchBar:self.searchBarTop contentsController:self];
     self.searchBarTop.delegate = self;
     
