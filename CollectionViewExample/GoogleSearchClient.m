@@ -7,6 +7,7 @@
 //
 
 #import "GoogleSearchClient.h"
+#import "AFNetworking.h"
 
 @implementation GoogleSearchClient
 
@@ -32,22 +33,16 @@
     return [[NSArray alloc]init];
 }
 
-- (void) search:(NSString*)query success:(void (^)(NSURLRequest*, NSHTTPURLResponse*, id))success failure:(void (^)(NSURLRequest*, NSHTTPURLResponse*, NSError*))failure{
+- (void) search:(NSString*)query start:(int)start success:(void (^)(NSURLRequest* request, NSHTTPURLResponse* response, id data))success failure:(void (^)(NSURLRequest* request, NSHTTPURLResponse* response, NSError* error, id data))failure{
 
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=%@", [@"Katrina" stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]]];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        id results = [JSON valueForKeyPath:@"responseData.results"];
-        if ([results isKindOfClass:[NSArray class]]) {
-            [self.imageResults removeAllObjects];
-            [self.imageResults addObjectsFromArray:results];
-            [self.searchDisplayController.searchResultsTableView reloadData];
-        }
-    } failure:nil];
-    
-    [operation start];
-    
+    for(int i = start ; i < start+4 ; i++){
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ajax.googleapis.com/ajax/services/search/images?v=1.0&rsz=8&q=%@&start=%d", [query stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding],i]];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        
+        AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:success failure:failure];
+        
+        [operation start];
+    }
 }
 
 @end

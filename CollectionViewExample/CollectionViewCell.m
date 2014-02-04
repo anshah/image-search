@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 yahoo. All rights reserved.
 //
 
-#import "MyCollectionViewCell.h"
+#import "CollectionViewCell.h"
 
-@implementation MyCollectionViewCell
+@implementation CollectionViewCell
 
 - (id)initWithFrame:(CGRect)frame
 {

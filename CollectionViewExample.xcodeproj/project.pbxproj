@@ -20,9 +20,11 @@
 		64C7E5A7189F8ACD000B84DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C7E589189F8ACD000B84DD /* UIKit.framework */; };
 		64C7E5AF189F8ACD000B84DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64C7E5AD189F8ACD000B84DD /* InfoPlist.strings */; };
 		64C7E5B1189F8ACD000B84DD /* CollectionViewExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C7E5B0189F8ACD000B84DD /* CollectionViewExampleTests.m */; };
-		64C7E5BC189F8B31000B84DD /* MyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C7E5BB189F8B31000B84DD /* MyCollectionViewController.m */; };
-		64C7E5BF189F8B8F000B84DD /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C7E5BE189F8B8F000B84DD /* MyCollectionViewCell.m */; };
+		64C7E5BC189F8B31000B84DD /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C7E5BB189F8B31000B84DD /* CollectionViewController.m */; };
+		64C7E5BF189F8B8F000B84DD /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C7E5BE189F8B8F000B84DD /* CollectionViewCell.m */; };
 		64C7E5C2189F8CF2000B84DD /* GoogleSearchClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C7E5C1189F8CF2000B84DD /* GoogleSearchClient.m */; };
+		64C7E5C8189FA1F3000B84DD /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C7E5C7189FA1F3000B84DD /* Image.m */; };
+		718DB0E77617416C9312B7F4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 996C195E171F4FEBB76B4D79 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,12 +55,16 @@
 		64C7E5AC189F8ACD000B84DD /* CollectionViewExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CollectionViewExampleTests-Info.plist"; sourceTree = "<group>"; };
 		64C7E5AE189F8ACD000B84DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		64C7E5B0189F8ACD000B84DD /* CollectionViewExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewExampleTests.m; sourceTree = "<group>"; };
-		64C7E5BA189F8B31000B84DD /* MyCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewController.h; sourceTree = "<group>"; };
-		64C7E5BB189F8B31000B84DD /* MyCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewController.m; sourceTree = "<group>"; };
-		64C7E5BD189F8B8F000B84DD /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
-		64C7E5BE189F8B8F000B84DD /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
+		64C7E5BA189F8B31000B84DD /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		64C7E5BB189F8B31000B84DD /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		64C7E5BD189F8B8F000B84DD /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		64C7E5BE189F8B8F000B84DD /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		64C7E5C0189F8CF2000B84DD /* GoogleSearchClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleSearchClient.h; sourceTree = "<group>"; };
 		64C7E5C1189F8CF2000B84DD /* GoogleSearchClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleSearchClient.m; sourceTree = "<group>"; };
+		64C7E5C6189FA1F3000B84DD /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		64C7E5C7189FA1F3000B84DD /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
+		749C7745CC8741FDBC502834 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		996C195E171F4FEBB76B4D79 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,7 @@
 				64C7E588189F8ACD000B84DD /* CoreGraphics.framework in Frameworks */,
 				64C7E58A189F8ACD000B84DD /* UIKit.framework in Frameworks */,
 				64C7E586189F8ACD000B84DD /* Foundation.framework in Frameworks */,
+				718DB0E77617416C9312B7F4 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +99,7 @@
 				64C7E5AA189F8ACD000B84DD /* CollectionViewExampleTests */,
 				64C7E584189F8ACD000B84DD /* Frameworks */,
 				64C7E583189F8ACD000B84DD /* Products */,
+				749C7745CC8741FDBC502834 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +119,7 @@
 				64C7E587189F8ACD000B84DD /* CoreGraphics.framework */,
 				64C7E589189F8ACD000B84DD /* UIKit.framework */,
 				64C7E5A4189F8ACD000B84DD /* XCTest.framework */,
+				996C195E171F4FEBB76B4D79 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -118,15 +127,16 @@
 		64C7E58B189F8ACD000B84DD /* CollectionViewExample */ = {
 			isa = PBXGroup;
 			children = (
+				64C7E5C5189FA1E5000B84DD /* Model */,
 				64C7E594189F8ACD000B84DD /* AppDelegate.h */,
 				64C7E595189F8ACD000B84DD /* AppDelegate.m */,
 				64C7E597189F8ACD000B84DD /* Main.storyboard */,
 				64C7E59D189F8ACD000B84DD /* Images.xcassets */,
 				64C7E58C189F8ACD000B84DD /* Supporting Files */,
-				64C7E5BA189F8B31000B84DD /* MyCollectionViewController.h */,
-				64C7E5BB189F8B31000B84DD /* MyCollectionViewController.m */,
-				64C7E5BD189F8B8F000B84DD /* MyCollectionViewCell.h */,
-				64C7E5BE189F8B8F000B84DD /* MyCollectionViewCell.m */,
+				64C7E5BA189F8B31000B84DD /* CollectionViewController.h */,
+				64C7E5BB189F8B31000B84DD /* CollectionViewController.m */,
+				64C7E5BD189F8B8F000B84DD /* CollectionViewCell.h */,
+				64C7E5BE189F8B8F000B84DD /* CollectionViewCell.m */,
 				64C7E5C3189F8FB8000B84DD /* API */,
 			);
 			path = CollectionViewExample;
@@ -170,6 +180,15 @@
 			name = API;
 			sourceTree = "<group>";
 		};
+		64C7E5C5189FA1E5000B84DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				64C7E5C6189FA1F3000B84DD /* Image.h */,
+				64C7E5C7189FA1F3000B84DD /* Image.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,9 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64C7E5B4189F8ACD000B84DD /* Build configuration list for PBXNativeTarget "CollectionViewExample" */;
 			buildPhases = (
+				C56F2A002B284F9D813E0449 /* Check Pods Manifest.lock */,
 				64C7E57E189F8ACD000B84DD /* Sources */,
 				64C7E57F189F8ACD000B84DD /* Frameworks */,
 				64C7E580189F8ACD000B84DD /* Resources */,
+				2512EF4F537E400DBD6EDFAF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -262,6 +283,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2512EF4F537E400DBD6EDFAF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C56F2A002B284F9D813E0449 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		64C7E57E189F8ACD000B84DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -270,8 +324,9 @@
 				64C7E596189F8ACD000B84DD /* AppDelegate.m in Sources */,
 				64C7E5C2189F8CF2000B84DD /* GoogleSearchClient.m in Sources */,
 				64C7E592189F8ACD000B84DD /* main.m in Sources */,
-				64C7E5BF189F8B8F000B84DD /* MyCollectionViewCell.m in Sources */,
-				64C7E5BC189F8B31000B84DD /* MyCollectionViewController.m in Sources */,
+				64C7E5C8189FA1F3000B84DD /* Image.m in Sources */,
+				64C7E5BF189F8B8F000B84DD /* CollectionViewCell.m in Sources */,
+				64C7E5BC189F8B31000B84DD /* CollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +450,7 @@
 		};
 		64C7E5B5189F8ACD000B84DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 749C7745CC8741FDBC502834 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -408,6 +464,7 @@
 		};
 		64C7E5B6189F8ACD000B84DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 749C7745CC8741FDBC502834 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -480,6 +537,7 @@
 				64C7E5B6189F8ACD000B84DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		64C7E5B7189F8ACD000B84DD /* Build configuration list for PBXNativeTarget "CollectionViewExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +546,7 @@
 				64C7E5B9189F8ACD000B84DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
