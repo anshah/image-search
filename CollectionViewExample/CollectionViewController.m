@@ -126,7 +126,12 @@
 
 - (void) moreSearch:(BOOL) isNew{
     if(isNew){
+        NSMutableArray* arrayDelete = [[NSMutableArray alloc] init];
+        for (int i = 0; i < [self.images count]; i++) {
+            [arrayDelete addObject:[NSIndexPath indexPathForItem:i inSection:0]];
+        }
         self.images = [[NSMutableArray alloc] init];
+        [self.collectionView deleteItemsAtIndexPaths: arrayDelete];
     }
     GoogleSearchClient* client = [[GoogleSearchClient alloc] init];
     [client search:self.searchQuery start:self.pageIndexSearchResult success:^(NSURLRequest *request, NSHTTPURLResponse *response, id data) {
@@ -137,12 +142,17 @@
             for(NSDictionary* dict in results){
                 [array addObject: [[Image alloc] initWithDictionary:dict]];
             }
+            int startReload = [self.images count];
             [self.images addObjectsFromArray:array];
             self.imageSets = [self groupTogether: self.images];
             //= [NSArray arrayWithArray:array];
             //NSLog(@"Count: %d %@",self.imageSets.count, self.images);
             //NSLog(@"Img: %@", self.images);
-            [self.collectionView reloadData];
+            NSMutableArray* arrayReload = [[NSMutableArray alloc] init];
+            for (int i = startReload; i < [self.images count]; i++) {
+                [arrayReload addObject:[NSIndexPath indexPathForItem:i inSection:0]];
+            }
+            [self.collectionView insertItemsAtIndexPaths:arrayReload];
         }
         self.searchingMore = self.searchingMore-1;
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id data) {
